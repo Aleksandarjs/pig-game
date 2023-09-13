@@ -1,0 +1,60 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+  .container {
+    max-width: 920px;
+    margin: 0 auto;
+  }
+}
+
+@layer utilities {
+  .btn {
+    @apply absolute bg-white rounded-xl py-4 px-8 uppercase text-black opacity-40 hover:opacity-100 transition duration-150 ease-out;
+  }
+  .icon {
+    @apply inline-block mb-[3px] me-2 text-xl;
+  }
+  .input {
+    @apply block h-8 mb-4 mt-1 outline-none bg-transparent border-b border-white text-white pl-1 w-full;
+  }
+  .select {
+    @apply block h-8 mb-4 mt-1 outline-none bg-transparent bg-white text-black pl-1 w-full;
+  }
+  .range {
+    @apply relative block h-8 mb-4 mt-1 outline-none bg-transparent bg-white text-black pl-1 w-full;
+  }
+}
+
+.active-player {
+  background-color: #dbafbc;
+}
+
+.winner {
+  background-color: #2f2f2f;
+  transition: 0.7s;
+  position: relative;
+}
+
+.winner::before {
+  content: "✨ WINNER ✨";
+  position: absolute;
+  top: -5%;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: red;
+  padding: 15px 30px;
+  font-weight: bold;
+  color: #fff;
+}
+
+.input::placeholder {
+  color: #fff;
+}
+
+.range::before {
+  content: 0;
+  position: absolute;
+  left: 0;
+}
